@@ -16,6 +16,8 @@ def resolve_file_name_by_uri(uri):
     # pattern = r"\/+(.*)"
     # file_name = re.findall(pattern=pattern, string=uri)[0]
     name = uri.split('/')[-1]
+    name = name[:name.find('.')] 
+
     return calibrate_name(name)
 
 
